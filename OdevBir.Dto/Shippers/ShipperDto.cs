@@ -8,7 +8,7 @@ namespace OdevBir.Dto.Shippers
 {
     public class ShipperDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string CompanyName { get; set; }
 
         public string? Phone { get; set; }

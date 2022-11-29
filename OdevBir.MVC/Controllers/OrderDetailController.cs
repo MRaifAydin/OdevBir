@@ -27,7 +27,7 @@ namespace OdevBir.MVC.Controllers
                 {
                     Id = item.Id,
                     Product = _productService.GetById(item.ProductId),
-                    UnitPrice = item.UnitPrice,
+                    UnitPrice = (item.UnitPrice - (decimal)((float)item.UnitPrice * item.Discount)),
                     Quantity = item.Quantity,
                     Discount = item.Discount
                 });
