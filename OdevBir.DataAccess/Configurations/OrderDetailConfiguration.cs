@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace OdevBir.DataAccess.Configurations
 {
-    public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
+    public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetailDto>
     {
-        public void Configure(EntityTypeBuilder<OrderDetail> builder)
+        public void Configure(EntityTypeBuilder<OrderDetailDto> builder)
         {
             builder.HasKey(e => new { e.OrderId, e.ProductId }).HasName("PK_Order_Details");
 

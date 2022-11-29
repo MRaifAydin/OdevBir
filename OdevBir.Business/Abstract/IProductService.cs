@@ -1,10 +1,10 @@
 ﻿using OdevBir.Core.Models;
-
+using OdevBir.Dto.Products;
 
 namespace OdevBir.Business.Abstract
 {
     public interface IProductService
     {
-        public Product GetById(int id);
+        public ProductDto GetById(int id);
     }
 }

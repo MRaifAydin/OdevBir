@@ -1,5 +1,7 @@
-﻿using OdevBir.Business.Abstract;
+﻿using AutoMapper;
+using OdevBir.Business.Abstract;
 using OdevBir.Core.Models;
+using OdevBir.Dto.Orders;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,14 +14,18 @@ namespace OdevBir.Business.Concrete
     public class OrderManager : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        public OrderManager(IOrderRepository orderRepository)
+        private readonly IMapper _mapper;
+        public OrderManager(IOrderRepository orderRepository, IMapper mapper)
         {
             _orderRepository = orderRepository;
+            _mapper = mapper;
         }
 
-        public List<Order> GetAll()
+        public List<OrderDto> GetAll()
         {
-            return _orderRepository.GetAll().ToList();
+            var entity = _orderRepository.GetAll();
+
+            return entity.Select(x => _mapper.Map<OrderDto>(entity)).ToList();
         }
     }
 }

@@ -1,5 +1,7 @@
-﻿using OdevBir.Business.Abstract;
+﻿using AutoMapper;
+using OdevBir.Business.Abstract;
 using OdevBir.Core.Models;
+using OdevBir.Dto.Customers;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,17 @@ namespace OdevBir.Business.Concrete
     public class CustomerManager : ICustomerService
     {
         private readonly ICustomerRepository _customerRepository;
-
-        public CustomerManager(ICustomerRepository customerRepository)
+        private readonly IMapper _mapper;
+        public CustomerManager(ICustomerRepository customerRepository, IMapper mapper)
         {
             _customerRepository = customerRepository;
+            _mapper = mapper;
         }
 
-        public Customer GetById(int id)
+        public CustomerDto GetById(int id)
         {
-            return _customerRepository.Get(x => x.CustomerId == id.ToString()).FirstOrDefault();
+            var entity = _customerRepository.Get(x => x.CustomerId == id.ToString()).FirstOrDefault();
+            return _mapper.Map<Customer, CustomerDto>(entity);
         }
     }
 }

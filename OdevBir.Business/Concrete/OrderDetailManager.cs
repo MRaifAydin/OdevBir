@@ -1,5 +1,6 @@
-﻿using OdevBir.Business.Abstract;
-using OdevBir.Core.Models;
+﻿using AutoMapper;
+using OdevBir.Business.Abstract;
+using OdevBir.Dto.OrderDetails;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,18 @@ namespace OdevBir.Business.Concrete
     public class OrderDetailManager : IOrderDetailService
     {
         private readonly IOrderDetailRepository _orderDetailRepository;
-
-        public OrderDetailManager(IOrderDetailRepository orderDetailRepository)
+        private readonly IMapper _mapper;
+        public OrderDetailManager(IOrderDetailRepository orderDetailRepository, IMapper mapper)
         {
             _orderDetailRepository = orderDetailRepository;
+            _mapper = mapper;
         }
 
-        public List<OrderDetail> GetById(int id)
+        public List<OrderDetailDto> GetById(int id)
         {
-            return _orderDetailRepository.Get(x => x.OrderId == id).ToList();
+            var entity = _orderDetailRepository.Get(x => x.OrderId == id);
+
+            return entity.Select(x => _mapper.Map<OrderDetailDto>(x)).ToList();
         }
     }
 }

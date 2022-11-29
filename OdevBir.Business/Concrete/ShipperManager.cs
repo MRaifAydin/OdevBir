@@ -1,5 +1,7 @@
-﻿using OdevBir.Business.Abstract;
+﻿using AutoMapper;
+using OdevBir.Business.Abstract;
 using OdevBir.Core.Models;
+using OdevBir.Dto.Shippers;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,19 +14,23 @@ namespace OdevBir.Business.Concrete
     public class ShipperManager : IShipperService
     {
         private readonly IShipperRepository _shipperRepository;
-
-        public ShipperManager(IShipperRepository shipperRepository)
+        private readonly IMapper _mapper;
+        public ShipperManager(IShipperRepository shipperRepository, IMapper mapper)
         {
             _shipperRepository = shipperRepository;
+            _mapper = mapper;
         }
 
-        public List<Shipper> GetAll()
+        public List<ShipperDto> GetAll()
         {
-            return _shipperRepository.GetAll().ToList();
+            var entity = _shipperRepository.GetAll();
+
+            return entity.Select(x => _mapper.Map<ShipperDto>(x)).ToList();
         }
 
-        public void InsertOne(Shipper entity)
+        public void InsertOne(ShipperDto dto)
         {
+            var entity = _mapper.Map<Shipper>(dto);
             _shipperRepository.InsertOne(entity);
         }
     }

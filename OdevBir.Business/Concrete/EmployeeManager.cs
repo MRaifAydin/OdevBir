@@ -1,5 +1,7 @@
-﻿using OdevBir.Business.Abstract;
+﻿using AutoMapper;
+using OdevBir.Business.Abstract;
 using OdevBir.Core.Models;
+using OdevBir.Dto.Employees;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;
@@ -12,15 +14,20 @@ namespace OdevBir.Business.Concrete
     public class EmployeeManager : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly IMapper _mapper;
 
-        public EmployeeManager(IEmployeeRepository employeeRepository)
+
+        public EmployeeManager(IEmployeeRepository employeeRepository, IMapper mapper)
         {
             _employeeRepository = employeeRepository;
+            _mapper = mapper;
         }
 
-        public Employee GetById(int id)
+        public EmployeeDto GetById(int id)
         {
-            return _employeeRepository.Get(x => x.EmployeeId == id).SingleOrDefault();
+            var enetity = _employeeRepository.Get(x => x.EmployeeId == id).SingleOrDefault();
+
+            return _mapper.Map<EmployeeDto>(enetity);
         }
     }
 }
