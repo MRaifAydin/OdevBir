@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevBir.Core", "OdevBir.Cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevBir.Repository", "OderBir.Repository\OdevBir.Repository.csproj", "{981F6DC2-9289-467D-A6F1-A5443D319FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.Business", "OdevBir.Business\OdevBir.Business.csproj", "{10E03E24-02E6-43F5-86A3-9BDB11B814E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevBir.Business", "OdevBir.Business\OdevBir.Business.csproj", "{10E03E24-02E6-43F5-86A3-9BDB11B814E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.Dto", "OdevBir.Dto\OdevBir.Dto.csproj", "{342A1FC3-A094-4B0F-AB7B-3E3B8AFD5753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevBir.Dto", "OdevBir.Dto\OdevBir.Dto.csproj", "{342A1FC3-A094-4B0F-AB7B-3E3B8AFD5753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.Conversion", "OdevBir.Conversion\OdevBir.Conversion.csproj", "{4898F97E-F1F4-4464-8A18-8A2B8029C680}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{342A1FC3-A094-4B0F-AB7B-3E3B8AFD5753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{342A1FC3-A094-4B0F-AB7B-3E3B8AFD5753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{342A1FC3-A094-4B0F-AB7B-3E3B8AFD5753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4898F97E-F1F4-4464-8A18-8A2B8029C680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4898F97E-F1F4-4464-8A18-8A2B8029C680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4898F97E-F1F4-4464-8A18-8A2B8029C680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4898F97E-F1F4-4464-8A18-8A2B8029C680}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

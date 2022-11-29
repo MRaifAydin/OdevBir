@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OderBir.Repository\OdevBir.Repository.csproj" />
     <ProjectReference Include="..\OdevBir.Core\OdevBir.Core.csproj" />
+    <ProjectReference Include="..\OdevBir.Dto\OdevBir.Dto.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,9 @@
-﻿using OdevBir.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OdevBir.Dto.Customers;
 
 namespace OdevBir.Business.Abstract
 {
     public interface ICustomerService
     {
-        public Customer GetById(int id);
+        public CustomerDto GetById(int id);
     }
 }

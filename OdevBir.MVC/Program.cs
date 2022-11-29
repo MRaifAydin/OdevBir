@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OdevBir.Conversion;
 using OdevBir.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,8 @@ var app = builder.Build();
 // Add connection strings.
 builder.Services.AddDbContext<NorthwndContext>(options =>
                  options.UseSqlServer(builder.Configuration.GetConnectionString("MsSql")));
+
+ConversionDIModule.Inject(builder.Services);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

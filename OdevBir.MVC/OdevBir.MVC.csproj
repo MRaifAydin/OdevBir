@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OdevBir.Conversion\OdevBir.Conversion.csproj" />
     <ProjectReference Include="..\OdevBir.Core\OdevBir.Core.csproj" />
     <ProjectReference Include="..\OdevBir.DataAccess\OdevBir.DataAccess.csproj" />
   </ItemGroup>

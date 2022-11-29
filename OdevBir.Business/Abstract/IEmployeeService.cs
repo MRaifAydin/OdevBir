@@ -1,14 +1,9 @@
-﻿using OdevBir.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OdevBir.Dto.Employees;
 
 namespace OdevBir.Business.Abstract
 {
     public interface IEmployeeService
     {
-        public Employee GetById(int id);
+        public EmployeeDto GetById(int id);
     }
 }

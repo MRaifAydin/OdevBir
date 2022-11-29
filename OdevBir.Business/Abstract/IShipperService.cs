@@ -1,17 +1,14 @@
-﻿using OdevBir.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OdevBir.Dto.Shippers;
+
+
 
 namespace OdevBir.Business.Abstract
 {
     public interface IShipperService
     {
-        public List<Shipper> GetAll();
+        public List<ShipperDto> GetAll();
 
-        public void InsertOne(Shipper entity);
+        public void InsertOne(ShipperDto entity);
 
     }
 }
