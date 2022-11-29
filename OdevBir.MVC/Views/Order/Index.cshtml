@@ -1,8 +1,30 @@
-﻿@{
+﻿@using OdevBir.Dto.Orders;
+@{
     string isim = "Mert";
 }
 
+@model List<OrderViewModel>
 
-<p>@isim</p>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Employee</th>
+            <th scope="col">Order Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@Html.ActionLink(item.Id.ToString(),"Index","OrderDetail",new { id = item.Id },null)</th>
+                <td>@item?.Customer.Name</td>
+                <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                <td>@item.OrderDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
 

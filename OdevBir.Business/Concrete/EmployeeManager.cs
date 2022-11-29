@@ -25,9 +25,9 @@ namespace OdevBir.Business.Concrete
 
         public EmployeeDto GetById(int id)
         {
-            var enetity = _employeeRepository.Get(x => x.EmployeeId == id).SingleOrDefault();
+            var entity = _employeeRepository.Get(x => x.EmployeeId == id).SingleOrDefault();
 
-            return _mapper.Map<EmployeeDto>(enetity);
+            return _mapper.Map<EmployeeDto>(entity);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace OdevBir.Business.Concrete
             _mapper = mapper;
         }
 
-        public CustomerDto GetById(int id)
+        public CustomerDto GetById(string id)
         {
             var entity = _customerRepository.Get(x => x.CustomerId == id.ToString()).FirstOrDefault();
             return _mapper.Map<Customer, CustomerDto>(entity);

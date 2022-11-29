@@ -14,7 +14,7 @@ namespace OdevBir.Dto.Orders
 
         public string? CustomerId { get; set; }
 
-        public int? EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
 
         public DateTime? OrderDate { get; set; }
     }

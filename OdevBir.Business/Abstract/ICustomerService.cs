@@ -4,6 +4,6 @@ namespace OdevBir.Business.Abstract
 {
     public interface ICustomerService
     {
-        public CustomerDto GetById(int id);
+        public CustomerDto GetById(string id);
     }
 }

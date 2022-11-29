@@ -25,7 +25,7 @@ namespace OdevBir.Business.Concrete
         {
             var entity = _orderRepository.GetAll();
 
-            return entity.Select(x => _mapper.Map<OrderDto>(entity)).ToList();
+            return entity.Select(x => _mapper.Map<OrderDto>(x)).ToList();
         }
     }
 }
