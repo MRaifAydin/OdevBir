@@ -13,9 +13,8 @@ namespace OdevBir.Conversion.MapperProfiles
     {
         public OrderDetailProfile()
         {
-            CreateMap<OrderDetailDto, OrderDetailDto>()
+            CreateMap<OrderDetail, OrderDetailDto>()
                 .ForMember(x => x.Id, opt => opt.MapFrom(y => y.OrderId))
-                .ForMember(x => x.Product, opt => opt.Ignore())
                 .ReverseMap();
         }
     }

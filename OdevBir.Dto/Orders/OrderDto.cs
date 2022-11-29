@@ -12,9 +12,9 @@ namespace OdevBir.Dto.Orders
     {
         public int Id { get; set; }
 
-        public CustomerDto Customer { get; set; }
+        public string? CustomerId { get; set; }
 
-        public EmployeeDto Employee { get; set; }
+        public int? EmployeeId { get; set; }
 
         public DateTime? OrderDate { get; set; }
     }

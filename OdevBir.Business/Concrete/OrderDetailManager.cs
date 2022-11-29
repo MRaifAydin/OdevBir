@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using OdevBir.Business.Abstract;
+using OdevBir.Core.Models;
 using OdevBir.Dto.OrderDetails;
+using OdevBir.Dto.Products;
 using OdevBir.Repository.Abstract;
 using System;
 using System.Collections.Generic;

@@ -39,7 +39,7 @@ public partial class NorthwndContext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
-    public virtual DbSet<OrderDetailDto> OrderDetails { get; set; }
+    public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
     public virtual DbSet<OrderDetailsExtended> OrderDetailsExtendeds { get; set; }
 

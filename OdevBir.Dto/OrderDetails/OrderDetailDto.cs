@@ -11,7 +11,7 @@ namespace OdevBir.Dto.OrderDetails
     {
         public int Id { get; set; }
 
-        public ProductDto Product { get; set; }
+        public int ProductId { get; set; }
 
         public decimal UnitPrice { get; set; }
 

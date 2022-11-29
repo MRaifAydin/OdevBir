@@ -15,8 +15,6 @@ namespace OdevBir.Conversion.MapperProfiles
         {
             CreateMap<Order, OrderDto>()
                 .ForMember(x => x.Id, opt => opt.MapFrom(y => y.OrderId))
-                .ForMember(x => x.Customer, opt => opt.Ignore())
-                .ForMember(x => x.Employee, opt => opt.Ignore())
                 .ReverseMap();
         }
     }
