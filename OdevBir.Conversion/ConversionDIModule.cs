@@ -13,7 +13,7 @@ namespace OdevBir.Conversion
     public class ConversionDIModule
     {
 
-        public static void Inject(IServiceCollection services)
+        public static void Inject(IServiceCollection services, IConfiguration configuration)
         {
             services.AddAutoMapper(cfg =>
             {
