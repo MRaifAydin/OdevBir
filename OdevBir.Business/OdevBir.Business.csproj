@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OderBir.Repository\OdevBir.Repository.csproj" />
     <ProjectReference Include="..\OdevBir.Core\OdevBir.Core.csproj" />
-    <ProjectReference Include="..\OdevBir.DataAccess\OdevBir.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

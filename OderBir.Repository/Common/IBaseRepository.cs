@@ -13,10 +13,10 @@ namespace OderBir.Repository.Common
 
         public IQueryable<TSource> Get(Expression<Func<TSource, bool>> predicate);
 
-        public void InsertOneAsync(TSource entity);
+        public void InsertOne(TSource entity);
 
-        public void UpdateAsync(TSource entity);
+        public void Update(TSource entity);
 
-        public void DeleteAsync(TSource entity);
+        public void Delete(TSource entity);
     }
 }
