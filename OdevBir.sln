@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.MVC", "OdevBir.MVC\OdevBir.MVC.csproj", "{C0663F16-23EB-49BC-9AAF-A87E2E4EA43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevBir.MVC", "OdevBir.MVC\OdevBir.MVC.csproj", "{C0663F16-23EB-49BC-9AAF-A87E2E4EA43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.DataAccess", "OdevBir.DataAccess\OdevBir.DataAccess.csproj", "{3CF9E88B-C912-442B-AAE7-64B31CA228BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdevBir.Core", "OdevBir.Core\OdevBir.Core.csproj", "{2F153C5B-746F-4BB4-BB19-370D4FB59FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C0663F16-23EB-49BC-9AAF-A87E2E4EA43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0663F16-23EB-49BC-9AAF-A87E2E4EA43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0663F16-23EB-49BC-9AAF-A87E2E4EA43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF9E88B-C912-442B-AAE7-64B31CA228BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF9E88B-C912-442B-AAE7-64B31CA228BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF9E88B-C912-442B-AAE7-64B31CA228BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF9E88B-C912-442B-AAE7-64B31CA228BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F153C5B-746F-4BB4-BB19-370D4FB59FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F153C5B-746F-4BB4-BB19-370D4FB59FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F153C5B-746F-4BB4-BB19-370D4FB59FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F153C5B-746F-4BB4-BB19-370D4FB59FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
