@@ -28,18 +28,18 @@ namespace OderBir.Repository.Common
             return _northwndContext.Set<TSource>().Where(predicate).AsQueryable();
         }
 
-        public void InsertOneAsync(TSource entity)
+        public void InsertOne(TSource entity)
         {
             _northwndContext.Set<TSource>().Add(entity);
             _northwndContext.SaveChanges();
         }
 
-        public void UpdateAsync(TSource entity)
+        public void Update(TSource entity)
         {
             _northwndContext.Set<TSource>().Update(entity);
             _northwndContext.SaveChanges();
         }
-        public void DeleteAsync(TSource entity)
+        public void Delete(TSource entity)
         {
             _northwndContext.Set<TSource>().Remove(entity);
             _northwndContext.SaveChanges();

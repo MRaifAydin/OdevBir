@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OdevBir.Core\OdevBir.Core.csproj" />
+    <ProjectReference Include="..\OdevBir.DataAccess\OdevBir.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
