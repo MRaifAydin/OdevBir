@@ -12,5 +12,7 @@ namespace OdevBir.MVC.Models
         public EmployeeDto? Employee { get; set; }
 
         public DateTime? OrderDate { get; set; }
+
+        public decimal OrderSum { get; set; }
     }
 }

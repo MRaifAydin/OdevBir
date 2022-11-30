@@ -13,6 +13,7 @@
             <th scope="col">Customer</th>
             <th scope="col">Employee</th>
             <th scope="col">Order Date</th>
+            <th scope="col">Total Sum</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +23,8 @@
                 <th scope="row">@Html.ActionLink(item.Id.ToString(),"Index","OrderDetail",new { id = item.Id },null)</th>
                 <td>@item?.Customer.Name</td>
                 <td>@item.Employee.FirstName @item.Employee.LastName</td>
-                <td>@item.OrderDate</td>
+                <td>@item.OrderDate.Value.ToString("dd/MM/yyyy")</td>
+                <td>@item.OrderSum</td>
             </tr>
         }
     </tbody>
